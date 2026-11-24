@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Science Fair Vinyl Player </title>
+    <link rel="stylesheet" href="style.css?v=1" />
+  </head>
+  <body>
+    <div class="record-player">
+
+      <button id="play-button">Play</button>
+      <audio id="love-song" src="music.mp3"></audio>
+      <input type="range" value="0" id="progress" />
+
+      <div class="play-button">
+        <div id="backward"><i class="fa-solid fa-backward"></i></div>
+        <div id="toggle"><i class="fa-solid fa-play"></i></div>
+        <div id="forward"><i class="fa-solid fa-forward"></i></div>
+      </div>
+
+      <h4>Sarà perché ti amo!</h4>
+
+      <div id="player-container">
+        <div id="vinylnoac" class="vinyl"></div> <!-- This will be the spinning one -->
+        <div id="vinylac" class="vinyl"></div>    <!-- This one stays in place -->
+      </div> 
+    </div>
+    <script src="science-vinyl.js"></script>
+    <script src="vinyl-movement.js"></script>
+  </body>
+ 
+</html>

@@ -1,0 +1,160 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: lightpink;
+    margin: 0;
+    padding: 0;
+    transform: scale(1);
+    transform-origin: top;
+    font-size: 40px;
+  }
+  
+  h1 {
+    color: darkmagenta;
+    margin-top: 20px;
+  }
+  
+  .record-player {
+    margin-top: 100px;
+  }
+  
+  #player-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .vinyl {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  #backward
+  {
+    background-image: url(./rewind.png);
+    background-size: 0.8em;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #toggle
+  {
+    background-image: url(./pause-play.png);
+    background-size: 1em;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #forward
+  {
+    background-image: url(./fast-forward.png);
+    background-size: 0.8em;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  
+  #vinylac {
+    z-index: 2; /* This stays in place */
+  }
+  
+  #vinylnoac {
+    transform: translateX(-500%);
+    z-index: 1; /* This will spin */
+    transition: transform 1s ease-in-out;
+  }
+
+  .move-left {
+    transform: translateX(-150%) !important;
+    transition: transform 1s ease-in-out;
+  }
+  
+  #play-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: aliceblue;
+    background-color: deeppink;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #play-button:hover {
+    background-color: indigo;
+  }
+  
+  #progress {
+    width: 80%;
+    margin-top: 20px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    background: #ddd;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+  
+  #progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 16px;
+    width: 16px;
+    background: deeppink;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  #progress::-moz-range-thumb {
+    height: 16px;
+    width: 16px;
+    background: deeppink;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .play-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .play-button div {
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #f53192;
+    box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
+    cursor: pointer;
+  }
+  
+  .play-button i {
+    font-size: 24px;
+  }
+  
+  .spinning {
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
